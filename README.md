@@ -64,38 +64,32 @@ llm-learning/
 
 ## ローカルで保存する
 
-このフォルダでGitを使います。初回作成時は `main` ブランチで初期化し、commitとremote設定は行っていません。
+ローカルの作業場所は `~/works/llm-learning` です。GitHubへの初回commit・pushと、`origin` の設定は済んでいます。
 
-最初の保存：
+作業前にローカルの状態を確認し、GitHub上の更新を取り込みます。
 
 ```sh
+cd ~/works/llm-learning
 git status
-git add .
-git commit -m "Initialize learning plan repository"
+git pull --ff-only
 ```
 
-以後、進捗を書いた後に変更したファイルを保存します。次はW01と週次レビューを更新した場合の例です。
+進捗を書いた後、変更したファイルをcommit・pushします。次はW01と週次レビューを更新した場合の例です。
 
 ```sh
 git diff
 git add weekly/W01.md notes/W01.md plan/progress-log.md
 git commit -m "Record W01 progress"
+git push
 ```
 
-`git commit` に名前・メールアドレスの設定を求められた場合は、自分がこのリポジトリで使用する情報を設定してください。
+## GitHubと同期する
 
-## GitHubへつなぐとき
+接続先は [SoChigusa/llm-learning](https://github.com/SoChigusa/llm-learning)、使用するブランチは `main` です。
 
-接続先のGitHubリポジトリは未指定です。ローカルの構成を作成した段階で、GitHubへの公開・pushは行っていません。
+ChatGPTに週次更新を依頼した場合も、変更はGitHub上のcommitとして保存します。
 
-今後、接続先が決まったらこのフォルダのremoteに設定します。空のGitHubリポジトリへ最初に送る場合は、初回commit後に、次の `YOUR_REPOSITORY_URL` を実際のURLへ置き換えて実行します。
-
-```sh
-git remote add origin YOUR_REPOSITORY_URL
-git push -u origin main
-```
-
-その後は作業前に `git pull --ff-only`、進捗をcommitした後に `git push` で同期します。接続先にすでにファイルがある場合は、先にその履歴と内容を確認して統合します。
+ローカルで書いた進捗はcommit・pushしてから週次更新を依頼してください。ChatGPTが更新した後は、次のローカル編集を始める前に `git pull --ff-only` で取り込みます。未commitの変更や履歴の分岐で同期が止まる場合は、作業中の変更を保持してから内容を確認します。
 
 ## 週次更新を依頼する
 
@@ -103,6 +97,6 @@ GitHub上の更新をcommit/pushした後、対象リポジトリへアクセス
 
 依頼例：
 
-> 対象リポジトリ：［URL］。W01の進捗を確認してください。次週に使える時間は約8時間です。AGENTS.md、基準計画、進捗ログ、W01と関連メモを読み、実績を踏まえてW02を作成し、必要なら現在の完了見込みを更新してください。既存のチェック状態と当初の目標日は保持してください。
+> 対象リポジトリ：[SoChigusa/llm-learning](https://github.com/SoChigusa/llm-learning)。W01の進捗を確認してください。次週に使える時間は約8時間です。AGENTS.md、基準計画、進捗ログ、W01と関連メモを読み、実績を踏まえてW02を作成し、必要なら現在の完了見込みを更新してください。既存のチェック状態と当初の目標日は保持してください。
 
 リポジトリを更新してもらった後は、ローカルでも同期してから次の記録を始めます。
