@@ -6,9 +6,9 @@
 
 ## 最初に開くファイル
 
-1. [W01のチェックリスト](weekly/W01.md)を開き、完了した項目だけ `[ ]` を `[x]` に変えます。
-2. 同じファイルの「今週の実績欄」に、予定時間・実績時間・途中の作業・次週の可処分時間を記入します。
-3. 講義や演習のメモは [notes/W01.md](notes/W01.md)、物理題材のメモは [notes/physics_task_seed.md](notes/physics_task_seed.md) に残せます。
+1. [W02のチェックリスト](weekly/W02.md)を開き、完了した項目だけ `[ ]` を `[x]` に変えます。W01は完了し、W02は11/16〜11/22・可処分時間11時間で準備済みです。
+2. 同じファイルの「ステータス」に実働時間と状態、「今週の実績欄」に途中の作業・質問・次週の可処分時間を記入します。
+3. オフラインの成果物や質問は [notes/W02.md](notes/W02.md)、物理題材の入力と出力は [notes/physics_task_seed.md](notes/physics_task_seed.md#w02-入力と出力の具体化) に残せます。
 4. 週末に [進捗ログ](plan/progress-log.md)へ週次レビューを追記します。
 
 W01-02は講座のブラウザNotebookで進められます。ローカルへのダウンロード・実行は任意です。Markdownの編集だけで学習管理を始められます。
@@ -28,13 +28,16 @@ llm-learning/
 │       └── llm_research_learning_plan.md
 ├── weekly/
 │   ├── W01.md
+│   ├── W02.md
 │   └── TEMPLATE.md
 ├── notes/
 │   ├── README.md
 │   ├── W01.md
+│   ├── W02.md
 │   └── physics_task_seed.md
 ├── notebooks/
-│   └── README.md
+│   ├── README.md
+│   └── week01_linear_regression.ipynb
 └── experiments/
     └── README.md
 ```
@@ -42,7 +45,8 @@ llm-learning/
 | ファイル・場所 | 役割 |
 | --- | --- |
 | [plan/master-plan.md](plan/master-plan.md) | 加速案の基準計画、25週の参照表、講座と受講範囲、段階ごとの通過条件、成果物・応募計画 |
-| [weekly/W01.md](weekly/W01.md) | W01の14項目と完了条件、時間別の優先順位、当週の実績・再開位置。タスクのチェック状態はここで管理 |
+| [weekly/W02.md](weekly/W02.md) | 今週の9項目と完了条件、11時間の割り付け、実績・再開位置 |
+| [weekly/W01.md](weekly/W01.md) | 完了したW01の14項目と実績。過去のチェック状態を保持 |
 | [weekly/TEMPLATE.md](weekly/TEMPLATE.md) | 実績と次週の可処分時間を確認してから使う週次ファイルのひな形 |
 | [plan/progress-log.md](plan/progress-log.md) | 節目の現在の完了見込み、週次レビュー、計画の変更記録 |
 | [notes/](notes/README.md) | 講義・演習のメモと物理題材の整理 |
@@ -56,7 +60,7 @@ llm-learning/
 ## 毎週の進め方
 
 - **学習中**：当週の `weekly/Wxx.md` にチェックを付けます。途中の項目は未チェックのまま、再開位置と残り作業を書きます。メモやNotebookへのリンクも残します。
-- **週末**：当週の実績欄を埋め、進捗ログに振り返りを記録します。完了番号の記録は週次ファイルへの参照でも構いません。
+- **週末**：当週のステータスと実績欄を更新し、進捗ログに振り返りを記録します。実績の詳細は週次ファイルを参照します。
 - **次週を組むとき**：実績、未完了作業、次週の可処分時間を使い、優先順位を付け直します。未完了分を機械的に全部上乗せしません。
 - **日程が変わったとき**：当初の目標日は残し、進捗ログの「現在の完了見込み」と変更理由を更新します。
 

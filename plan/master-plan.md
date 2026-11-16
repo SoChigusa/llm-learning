@@ -1,8 +1,8 @@
 # LLM研究職に向けた学習計画
 
-更新日：2026年11月9日
+更新日：2026年11月16日
 
-分割元：[原文保管](archive/llm_research_learning_plan.md)。週ごとの作業は [W01](../weekly/W01.md)、実績・現在の完了見込みは [進捗ログ](progress-log.md) で管理します。
+分割元：[原文保管](archive/llm_research_learning_plan.md)。今週の作業は [W02](../weekly/W02.md)、過去の記録は [W01](../weekly/W01.md)、実績・現在の完了見込みは [進捗ログ](progress-log.md) で管理します。
 
 **採用する基準計画は、11月9日開始の加速案です。2027年3月28日に応募用の評価・agentの初版、5月2日にLoRA-SFTを含む報告を用意することを理想的な目標とします。**
 
@@ -39,7 +39,7 @@
 
 # 週ごとのタスクリスト
 
-2026年11月9日〜15日の14項目と実績欄は [weekly/W01.md](../weekly/W01.md) に分けています。以降の週も `weekly/Wxx.md` で管理します。
+今週（2026年11月16日〜22日）のタスクは [weekly/W02.md](../weekly/W02.md) にあります。前週の14項目と実績は [weekly/W01.md](../weekly/W01.md) に保持しています。以降の週も `weekly/Wxx.md` で管理します。
 
 # 学ぶ順番
 
